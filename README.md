@@ -1,8 +1,6 @@
 # Peiyang-Wang.github.io
 
-这是由我创建的个人主页仓库。
-
-当前主页是一个轻量的静态站点，我保留了学术主页的内容组织方式，同时加入了更现代的交互与视觉样式。为了方便维护和让 GitHub 仓库首页更整洁，站点源码已经放在 `client/` 目录下，不再直接把 `index.html` 暴露在仓库根目录。
+这是由我创建的个人主页仓库。当前主页是一个轻量的静态站点，保留了学术主页的内容组织方式，同时加入了更现代的交互与视觉样式。为了方便维护和让 GitHub 仓库首页更整洁，站点源码已经放在 `client/` 目录下，不再直接暴露 `index.html`。
 
 ## 目录结构
 
@@ -14,7 +12,7 @@
 - `client/sitemap.xml`：站点地图
 - `.github/workflows/deploy.yml`：GitHub Pages 自动部署工作流
 
-## 最常改的文件
+## 常改文件
 
 后续维护时，主要会改这些文件：
 
@@ -23,7 +21,7 @@
 - `client/js/main.js`
 - `client/images/`
 
-如果只是更新个人信息、新闻、论文、经历，绝大多数情况下只需要编辑 `client/index.html`。
+编辑 `client/index.html` 来更新和维护个人信息、新闻、论文、经历。
 
 ## 本地预览
 
@@ -49,7 +47,7 @@ http://127.0.0.1:8000
 2. 提交并推送到 `main`
 3. GitHub Actions 自动把 `client/` 目录部署到 GitHub Pages
 
-## 推荐维护流程
+## 维护流程
 
 ```bash
 # 1. 本地预览
@@ -62,18 +60,4 @@ python3 -m http.server 8000 -d client
 git add README.md client .github/workflows/deploy.yml
 git commit -m "update homepage"
 git push origin main
-```
-
-## 关于页面署名
-
-之前页面底部有：
-
-```text
-Website template courtesy of Jon Barron.
-```
-
-当前这一版主页已经做了较大幅度的结构、样式和交互重构，不再直接依赖原模板的页面组织方式，因此页面中已经改为：
-
-```text
-Designed and maintained by Peiyang Wang.
-```
+``
